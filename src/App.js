@@ -11,7 +11,7 @@ const Navigation = (props) => <nav>
 
 function App() {
   return (
-    <div>
+    <div className='page-container'>
       <Navigation />
       <Router />
     </div>
