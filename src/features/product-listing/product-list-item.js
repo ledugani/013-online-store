@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function ProductListItem(props) {
+  const thisItem
   return(
     <div className='product-list-item'>
       <h3>{props.name}</h3>
@@ -13,7 +14,9 @@ export default function ProductListItem(props) {
       <div>{ props.product.description }</div>
       <div>${ props.product.price }</div>
       <div>
-        <button>Add to cart</button>
+        <button
+          onClick={() => props.addToCart(props.product)}
+        >Add to cart ()</button>
       </div>
     </div>
   )
