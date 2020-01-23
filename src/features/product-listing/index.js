@@ -7,14 +7,14 @@ import fetchApi from '../../modules/fetch-api';
 class ProductListing extends React.Component {
   componentDidMount() {
     const { loadProducts } = this.props
-    fetchApi('get', "../../data/products.json")
+    fetchApi('get', "https://student-example-api.herokuapp.com/v1/products.json")
       .then((json => {
         loadProducts(json)
       }))
   }
 
   render() {
-    const { addToCart, removeFromCart, products, cart } = this.props
+    const { addToCart, removeFromCart, products, cart } = this.props;
 
     return <div className='product-listing'>
       {
