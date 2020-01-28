@@ -11,4 +11,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)
+export default connect(mapStateToProps)(Checkout)
