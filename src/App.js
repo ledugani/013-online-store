@@ -9,12 +9,13 @@ const Navigation = ({cart}) => <nav>
     <li><NavLink to='/cart'>Cart ({cart.reduce((acc, item) => {
       return acc + item.quantity;
     }, 0)})</NavLink></li>
+    <li><NavLink to='/checkout'>Check out</NavLink></li>
   </ul>
 </nav>
 
 class App extends Component {
   render() {
-      return (
+    return (
       <div className='page-container'>
         <Navigation {...this.props} />
         <Router />
